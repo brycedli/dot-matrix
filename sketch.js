@@ -16,6 +16,15 @@ function draw() {
         circle (resolution * (Math.floor(mouseX / resolution)), resolution * (Math.floor(mouseY / resolution+1)), size);
         circle (resolution * (Math.floor(mouseX / resolution)), resolution * (Math.floor(mouseY / resolution-1)), size);
     }
+
+    if (touches.length > 0) {
+        //print(touches);
+        circle (resolution * (Math.floor(touches[0].x / resolution)), resolution * (Math.floor(touches[0].y / resolution)), size);
+        circle (resolution * (Math.floor(touches[0].x / resolution)+1), resolution * (Math.floor(touches[0].y / resolution)), size);
+        circle (resolution * (Math.floor(touches[0].x / resolution)-1), resolution * (Math.floor(touches[0].y / resolution)), size);
+        circle (resolution * (Math.floor(touches[0].x / resolution)), resolution * (Math.floor(touches[0].y / resolution+1)), size);
+        circle (resolution * (Math.floor(touches[0].x / resolution)), resolution * (Math.floor(touches[0].y / resolution-1)), size);
+    }
     
 }
 
